@@ -11,7 +11,10 @@ int main(void)
 	{
 		putchar(i);
 		if (i == 57)
+		{
+			putchar('\n');
 			continue;
+		};
 		putchar(',');
 		putchar(' ');
 	};
