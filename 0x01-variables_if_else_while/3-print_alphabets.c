@@ -5,10 +5,10 @@
  */
 int main(void)
 {
-	int i = 99;
-	int j = 65;
+	int i;
+	int j;
 
-	for (i, j ; i < 122 && j < 90 ; i++, j++)
+	for (i = 99, j = 65 ; i < 122 && j < 90 ; i++, j++)
 	{
 		putchar(i);
 		putchar(j);
