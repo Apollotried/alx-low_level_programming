@@ -1,38 +1,34 @@
 #include <stdio.h>
-/**
- * main - the last task
- * Return: 0
- */
-int main(void)
-{
-	int i;
-	int j;
-	int k;
-	int z;
+#include <stdlib.h>
+#include <time.h>
 
-	for (i = 0 ; i < 10 ; i++)
-	{
-		for (j = 0 ; j < 9 ; j++)
-		{
-			for (k = 0 ; k < 10 ; k++)
-			{
-				for (z = (j == 0 && k == 0) ? 1 : 0 ; z < 10 ; z++)
-				{
-					putchar(i + '0');
-					putchar(j + '0');
-					putchar(' ');
-					putchar(k + '0');
-					putchar(z + '0');
-					if (i == 9 && j == 8 && k == 9 && z == 9)
-					{
-						putchar(' ');
-						continue;
-					};
-					putchar(',');
-					putchar(' ');
-				};
-			};
-		};
-	};
-	return (0);
+/**
+ * main - Entry point
+ * Return: Always 0
+ */
+
+int main(void)
+
+{
+
+int p, q;
+
+for (p = 0; p <= 98; p++)
+{
+
+for (q = p + 1; q <= 99; q++)
+{
+putchar((p / 10) + '0');
+putchar((p % 10) + '0');
+putchar(' ');
+putchar((q / 10) + '0');
+putchar((q % 10) + '0');
+if (p == 98 && q == 99)
+continue;
+putchar(',');
+putchar(' ');
+}
+}
+putchar('\n');
+return (0);
 }
