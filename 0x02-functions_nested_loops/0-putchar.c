@@ -1,4 +1,3 @@
-#include <stdio.h>
 #include "main.h"
 /**
  * main - Write a program that prints _putchar, followed by a new line.
@@ -14,5 +13,6 @@ _putchar('c');
 _putchar('h');
 _putchar('a');
 _putchar('r');
-	return (0);
+_putchar('\n');
+return (0);
 }
