@@ -1,1 +1,1 @@
-int _ptchar(char);
+int _ptchar(char c);
