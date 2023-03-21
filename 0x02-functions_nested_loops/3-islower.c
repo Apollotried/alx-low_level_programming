@@ -2,6 +2,7 @@
 #include <ctype.h>
 /**
  * _islower - checks if lowercase
+ * @c : the character to check (must be an ASCII character)
  * Return: int
  */
 int _islower(int c)
