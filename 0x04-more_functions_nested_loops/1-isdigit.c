@@ -7,5 +7,14 @@
  */
 int _isdigit(int c)
 {
-	return (isdigit(c));
+	int r;
+
+	if (isdigit(c))
+	{
+		r = 1;
+	} else
+	{
+		r = 0;
+	};
+	return (r);
 }
