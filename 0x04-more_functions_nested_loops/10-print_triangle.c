@@ -2,6 +2,7 @@
 
 /**
  * print_triangle - entry point
+ * @size: size of the triangle
  * Return: void
  */
 
