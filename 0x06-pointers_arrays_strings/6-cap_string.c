@@ -1,23 +1,38 @@
 #include "main.h"
-#include <string.h>
-#include <ctype.h>
-#include <stdlib.h>
+
 /**
- * cap_string - capitalize all words of a string
- * @c: the string to manipulate
- * Return: char*
+ * cap_string - Capitalizes all words of a string.
+ * @str: The string to be capitalized.
+ *
+ * Return: A pointer to the changed string.
  */
-char *cap_string(char *c)
+char *cap_string(char *str)
 {
-	char *copy = malloc(strlen(c) + 1);
+	int index = 0;
 
-	strcpy(copy, c);
-	char *token = strtok(copy, " \t\n,;.!?\"(){}");
-
-	while (token != NULL)
+	while (str[index])
 	{
-		token[0] = toupper(token[0]);
-		token = strtok(NULL, " \t\n,;.!?\"(){}");
+		while (!(str[index] >= 'a' && str[index] <= 'z'))
+			index++;
+
+		if (str[index - 1] == ' ' ||
+		    str[index - 1] == '\t' ||
+		    str[index - 1] == '\n' ||
+		    str[index - 1] == ',' ||
+		    str[index - 1] == ';' ||
+		    str[index - 1] == '.' ||
+		    str[index - 1] == '!' ||
+		    str[index - 1] == '?' ||
+		    str[index - 1] == '"' ||
+		    str[index - 1] == '(' ||
+		    str[index - 1] == ')' ||
+		    str[index - 1] == '{' ||
+		    str[index - 1] == '}' ||
+		    index == 0)
+			str[index] -= 32;
+
+		index++;
 	}
-	return (copy);
+
+	return (str);
 }
