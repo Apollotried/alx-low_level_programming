@@ -7,8 +7,9 @@
  */
 char *string_toupper(char *c)
 {
-	char *d = c;
+	char *d;
 
+	d = c;
 	while (*d)
 	{
 		*d = toupper(*d);
