@@ -8,12 +8,15 @@
  */
 char *cap_string(char *c)
 {
-	char *token = strtok(c, " \t\n,;.!?\"(){}");
+	char *copy = malloc(strlen(c) + 1);
+
+	strcpy(copy, c);
+	char *token = strtok(copy, " \t\n,;.!?\"(){}");
 
 	while (token != NULL)
 	{
 		token[0] = toupper(token[0]);
 		token = strtok(NULL, " \t\n,;.!?\"(){}");
 	}
-	return (c);
+	return (copy);
 }
