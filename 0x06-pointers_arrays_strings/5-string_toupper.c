@@ -12,4 +12,5 @@ char *string_toupper(char *c)
 		*c = *c.toupper(*c);
 		c++
 	}
+	return c;
 }
