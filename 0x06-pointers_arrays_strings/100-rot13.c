@@ -7,8 +7,8 @@
  */
 char *rot13(char *c)
 {
-	char *arr1 = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
-	char *arr2 = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
+	char arr1[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+	char arr2[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
 	char *p;
 
 	p = c;
@@ -19,7 +19,7 @@ char *rot13(char *c)
 
 		if (*p != '\0')
 		{
-			int indice = ptr - arr1 - 1;
+			int indice = ptr - arr1;
 
 			*p = arr2[indice];
 		}
