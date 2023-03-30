@@ -1,29 +1,27 @@
 #include "main.h"
-#include <string.h>
+
 /**
- * rot13 - codes in ROT13
- * @c: the string
- * Return: char *
+ * rot13 - encodes a string into rot13
+ * @s: string to encode
+ *
+ * Return: address of s
  */
-char *rot13(char *c)
+char *rot13(char *s)
 {
-	char arr1[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
-	char arr2[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
-	char *p;
+	int i, j;
+	char a[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+	char b[] = "nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM";
 
-	p = c;
-
-	while (*p)
+	for (i = 0; *(s + i); i++)
 	{
-		char *ptr = memchr(arr1, *p, 52);
-
-		if (*p != '\0')
+		for (j = 0; j < 52; j++)
 		{
-			int indice = ptr - arr1;
-
-			*p = arr2[indice];
+			if (a[j] == *(s + i))
+			{
+				*(s + i) = b[j];
+				break;
+			}
 		}
-		p++;
-	};
-	return (c);
+	}
+	return (s);
 }
