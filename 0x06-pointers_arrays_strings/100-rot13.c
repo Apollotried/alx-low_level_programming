@@ -9,20 +9,21 @@ char *rot13(char *c)
 {
 	char *arr1 = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
 	char *arr2 = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
-char *p;
+	char *p;
 
-p = c;
+	p = c;
 
-while (*p)
-{
-char *ptr = memchr(arr1, *p, 52);
+	while (*p)
+	{
+		char *ptr = memchr(arr1, *p, 52);
+
 		if (*p != '\0')
-{
-			int indice = ptr - arr1;
+		{
+			int indice = ptr - arr1 - 1;
 
-*p = arr2[indice];
+			*p = arr2[indice];
 		}
 		p++;
 	};
-return (c);
+	return (c);
 }
