@@ -3,7 +3,7 @@
 /**
  * *_memset - fills memory
  * @s: the memory to fill
- * @char: the content
+ * @b: the content
  * @n: the number to fill out
  * Return: char*
  */
