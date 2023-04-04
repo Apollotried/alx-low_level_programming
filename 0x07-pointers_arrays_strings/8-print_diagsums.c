@@ -27,6 +27,5 @@ void print_diagsums(int *a, int size)
 			}
 		};
 	};
-	printf("%d, ", count);
-	printf("%d", count2);
+	printf("%d, %d", count, count2);
 }
