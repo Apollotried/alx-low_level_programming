@@ -16,7 +16,7 @@ void print_chessboard(char (*a)[8])
 			if (j == 7)
 			{
 				_putchar('\n');
-			}
-		}
-	}
+			};
+		};
+	};
 }
