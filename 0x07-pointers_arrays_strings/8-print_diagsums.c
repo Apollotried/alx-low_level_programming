@@ -10,7 +10,8 @@ void print_diagsums(int *a, int size)
 {
 	int i;
 	int j;
-	int count;
+	int count = 0;
+	int count2 = 0;
 
 	for (i = 0 ; i < size ; i++)
 	{
@@ -20,7 +21,12 @@ void print_diagsums(int *a, int size)
 			{
 				count += a[i * size + j];
 			};
+			if (i + j == size - 1)
+			{
+				count2 += a[i * size + j];
+			}
 		};
 	};
-	printf("%d", count);
+	printf("%d, ", count);
+	printf("%d", count2);
 }
