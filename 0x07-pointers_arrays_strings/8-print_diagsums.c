@@ -18,7 +18,7 @@ void print_diagsums(int *a, int size)
 		{
 			if (i == j)
 			{
-				count += a[i][j];
+				count += a[i * size + j];
 			};
 		};
 	};
