@@ -19,7 +19,7 @@ void print_diagsums(int *a, int size)
 	{
 		count1 = count1 + a[i * size + i];
 	}
-	for (i = size - 1 ; i > size ; i--)
+	for (i = size - 1 ; i >= 0  ; i--)
 	{
 		count2 = count2 + a[y * size + (size - y - 1)];
 	}
