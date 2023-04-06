@@ -29,13 +29,13 @@ int test(char *s, char *p)
  */
 int is_palindrome(char *s)
 {
+	int i;
+	char *p;
+
 	if (*s == '\n')
 	{
 		return (1);
 	}
-	int i;
-	char *p;
-
 	 i = strlen(s);
 	p = &s[i - 1];
 
