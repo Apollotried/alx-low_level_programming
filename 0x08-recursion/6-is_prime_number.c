@@ -1,4 +1,5 @@
 #include "main.h"
+#include <math.h>
 /**
  * is_prime_number - checkes if a number is prime
  * @n: the number to manipulate
@@ -21,6 +22,10 @@ int is_prime_number(int n)
 
 int helper(int n, int i)
 {
+	if (i > sqrt(n))
+	{
+		return (1);
+	}
 	if (n % i == 0)
 	{
 		return (0);
