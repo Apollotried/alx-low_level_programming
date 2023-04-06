@@ -1,4 +1,5 @@
 #include "main.h"
+#include <string.h>
 /**
  * test - helper function
  * @s: the string
