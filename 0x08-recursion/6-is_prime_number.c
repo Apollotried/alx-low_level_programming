@@ -22,7 +22,7 @@ int is_prime_number(int n)
 
 int helper(int n, int i)
 {
-	if (i > sqrt(n))
+	if (i == n)
 	{
 		return (1);
 	}
