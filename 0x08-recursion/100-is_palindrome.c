@@ -33,8 +33,11 @@ int is_palindrome(char *s)
 	{
 		return (1);
 	}
-	int i = strlen(s);
-	int *p = &s[i - 1];
+	int i;
+	char *p;
+
+	 i = strlen(s);
+	p = &s[i - 1];
 
 	return (test(s, p));
 }
