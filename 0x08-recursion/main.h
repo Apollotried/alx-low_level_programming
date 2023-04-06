@@ -7,3 +7,5 @@ int _pow_recursion(int x, int y);
 int _sqrt_recursion(int n);
 int helper(int n, int i);
 int find(int n, int r);
+int is_palindrome(char *s);
+int test(char *s, char *p);
