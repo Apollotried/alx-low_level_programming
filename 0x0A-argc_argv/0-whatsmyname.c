@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 /**
  * main - entry
  * @argc: count
@@ -7,12 +8,8 @@
  */
 int main(int argc, char *argv[])
 {
-	char *p = argv[0];
+	(void)argc;
 
-	while (*p != '\0')
-	{
-		_putchar(*p);
-		p++;
-	};
+	printf("%s\n", argv[0]);
 	return (0);
 }
