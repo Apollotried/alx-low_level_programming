@@ -5,13 +5,14 @@
  * @argv: array of args
  * Return: 0
  */
-int main(argc, char *argv[])
+int main(int argc, char *argv[])
 {
-	int *p = argv[0];
+	char *p = argv[0];
 
 	while (*p != '\0')
 	{
 		_putchar(*p);
 		p++;
 	};
+	return (0);
 }
