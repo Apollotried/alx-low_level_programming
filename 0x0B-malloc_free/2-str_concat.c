@@ -1,5 +1,5 @@
 #include "main.h"
-#include <stdlab.h>
+#include <stdlib.h>
 #include <string.h>
 /**
  * str_concat - entry
