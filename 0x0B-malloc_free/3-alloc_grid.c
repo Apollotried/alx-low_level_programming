@@ -17,7 +17,7 @@ if (width == 0 || height == 0)
 return (NULL);
 };
 grid = (int **)malloc(height * sizeof(int *));
-if (grids == NULL)
+if (grid == NULL)
 {
 	return (NULL);
 };
