@@ -46,34 +46,32 @@ for (i = 0 ; src[i] ; i++)
 */
 dog_t *new_dog(char *name, float age, char *owner)
 {
-dog_t *akam;
+dog_t *doggo;
 
 if (name == NULL || age < 0 || owner == NULL)
-	return (NULL);
-akam = malloc(sizeof(dog_t));
+return (NULL);
 
-if (akam == NULL)
-	return (NULL);
-
-akam->name = malloc(_strlen(name) + 1);
-
-if (akam->name == NULL)
+doggo = malloc(sizeof(dog_t));
+if (doggo == NULL)
+return (NULL);
+doggo->name = malloc(sizeof(char) * (_strlen(name) + 1));
+if (doggo->name == NULL)
 {
-	free(akam);
-	return (NULL);
+free(doggo);
+return (NULL);
 }
 
-akam->owner = malloc(_strlen(owner) + 1);
-
-if (akam->owner == NULL)
+doggo->owner = malloc(sizeof(char) * (_strlen(owner) + 1));
+if (doggo->owner == NULL)
 {
-	free(akam->name);
-	free(akam);
-	return (NULL);
+free(doggo->name);
+free(doggo);
+return (NULL);
 }
-akam->name = _strcopy(akam->name, name);
-akam->age = age;
-akam->owner = _strcopy(akam->owner, owner);
 
-return (akam);
+doggo->name = _strcopy(doggo->name, name);
+doggo->age = age;
+doggo->owner = _strcopy(doggo->owner, owner);
+
+return (doggo);
 }
