@@ -75,9 +75,9 @@ free(akam);
 return (NULL);
 }
 
-akam->name = _strcopy(doggo->name, name);
+akam->name = _strcopy(akam->name, name);
 akam->age = age;
-akam->owner = _strcopy(doggo->owner, owner);
+akam->owner = _strcopy(akam->owner, owner);
 
 return (akam);
 }
