@@ -53,7 +53,7 @@ akam = malloc(sizeof(dog_t));
 if (akam == NULL)
 	return (NULL);
 
-akam->name == malloc(_strlen(name) + 1);
+akam->name = malloc(_strlen(name) + 1);
 
 if (akam->name == NULL)
 {
