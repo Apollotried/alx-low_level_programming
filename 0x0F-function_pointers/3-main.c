@@ -1,4 +1,4 @@
-#include <steio.h>
+#include <stdio.h>
 #include <stdlib.h>
 /**
  * main - prints its own opcodes
