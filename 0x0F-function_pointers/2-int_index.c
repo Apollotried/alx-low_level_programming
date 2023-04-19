@@ -4,7 +4,8 @@
  * int_index - search for an int
  * @array: the array
  * @size: the size of an array
- * cmp: the callback
+ * @cmp: the callback
+ * Return: int
  */
 int int_index(int *array, int size, int (*cmp)(int))
 {
