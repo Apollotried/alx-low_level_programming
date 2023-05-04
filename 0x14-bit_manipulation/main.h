@@ -1,8 +1,8 @@
 #ifndef MAIN_H
 #define MAIN_H
 
-/**
- * Description: header file with the prototypes
+/*
+ * Desc: header file with the prototypes
  */
 
 int _putchar(char c);
