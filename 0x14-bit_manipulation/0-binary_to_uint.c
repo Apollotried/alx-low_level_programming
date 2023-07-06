@@ -10,12 +10,12 @@ unsigned int binary_to_uint(const char *b)
 	int iter;
 	unsigned int val = 0;
 
-	if (b == NULL)
+	if (!b)
 		return (0);
 
-	for (iter = 0; b[iter]; i++)
+	for (iter = 0; b[iter]; iter++)
 	{
-		if (b[iter] > '1' || b[i] < '0')
+		if (b[iter] > '1' || b[iter] < '0')
 			return (0);
 
 		val = 2 * val + (b[iter] - '0');
